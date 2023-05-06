@@ -117,3 +117,13 @@ form.button_to {
   padding-top: 10px;
   min-width: 110px;
 }
+
+.custom-link {
+  color: #333; /* Change link color to black */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.custom-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
