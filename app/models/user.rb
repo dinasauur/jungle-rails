@@ -5,7 +5,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: { case_sensitive: false }
   validates_confirmation_of :password
   validates :password, presence: true, length: { minimum: 6 }
-  validates :authenticate_with_credentials
 
   def self.authenticate_with_credentials(email, password)
     user = User.find_by(email: email.strip.downcase) #strip is used to remove any leading or trailing whitespace characters that might have accidentally been added when the user entered their email address. 

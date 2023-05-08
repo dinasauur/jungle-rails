@@ -61,4 +61,18 @@ RSpec.describe User, type: :model do
       expect(user.password.length).to be >= 6
     end
   end
+
+  describe '.authenticate_with_credentials' do
+    it "should successfully log user in if the credentials are valid" do
+      user = User.create(
+        name: 'lula',
+        email: 'lula@lounge.com',
+        password: 'password'
+      )
+
+      authenticated_user = User.authenticate_with_credentials('lula@lounge.com', 'password')
+      expect(authenticated_user).to eq(user)
+    end
+  end
+
 end
