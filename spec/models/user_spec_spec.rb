@@ -54,5 +54,11 @@ RSpec.describe User, type: :model do
       user.valid?
       expect(user.errors[:password]).to include("is too short (minimum is 6 characters)")
     end
+
+    it "is valid if password is 6 or more characters" do
+      user = User.new(password: '123456')
+      user.valid?
+      expect(user.password.length).to be >= 6
+    end
   end
 end
