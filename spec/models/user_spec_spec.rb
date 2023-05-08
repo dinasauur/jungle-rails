@@ -43,10 +43,16 @@ RSpec.describe User, type: :model do
       expect(user.errors[:email]).to be_present
     end
 
-    it "is is valid when provided an email with different casing" do
+    it "is valid when provided an email with different casing" do
       user = User.new(email: 'LULA@loUNgE.com')
       user.save # check that the email saved to the database is in lowercase
       expect(user.email.downcase).to eql('lula@lounge.com')
+    end
+
+    it "is invalid if password is less than 6 characters" do
+      user = User.new(password: '12345')
+      user.valid?
+      expect(user.errors[:password]).to include("is too short (minimum is 6 characters)")
     end
   end
 end
