@@ -27,6 +27,14 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+   # This route sends requests to our naked url to the *cool* action in the *gif* controller.
+   root to: 'gif#cool'
+    
+   # I've created a gif controller so I have a page I can secure later. 
+   # This is optional (as is the root to: above).
+   get '/cool' => 'gif#cool'
+   get '/sweet' => 'gif#sweet'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
