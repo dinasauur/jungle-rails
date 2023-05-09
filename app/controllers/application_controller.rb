@@ -29,4 +29,21 @@ class ApplicationController < ActionController::Base
     }
     cookies[:cart]
   end
+
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
+
+  # The ||= operator is used to assign @current_user to the result of User.find(session[:user_id]) only if @current_user is not already set (in other words, only if they're logged in). 
+  # This is a technique called "memoization" that helps to avoid unnecessary database queries.
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+
+  #The helper_method line below allows us to use @current_user in our view files
+  helper_method :current_user
+
+  def authorize
+    redirect_to '/login' unless current_user
+  end
 end
