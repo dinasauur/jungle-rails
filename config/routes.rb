@@ -10,7 +10,16 @@ Rails.application.routes.draw do
     post   :remove_item
   end
 
+  # use get for customized routes, resources is common
+  # bob = {a: 1}
+  # bob[:a]
+  # link_to [:product]
+  # link_to product_path
+  # link_to 'product/'
+
+
   resources :orders, only: [:create, :show]
+  
 
   namespace :admin do
     root to: 'dashboard#show'
