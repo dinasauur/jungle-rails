@@ -66,9 +66,9 @@
         </li>
         <li class="nav-item end-0">
         <% if current_user %>
-          Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout', class: "text-decoration-none text-dark" %>
         <% else %>
-          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/users/new' %>
+          <%= link_to 'Login', '/login', class: "text-decoration-none text-dark" %> | <%= link_to 'Signup', '/users/new', class: "text-decoration-none text-dark" %>
         <% end %>
         </li>
       </ul>
