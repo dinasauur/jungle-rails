@@ -36,6 +36,8 @@ If Rails is complaining about authentication to the database, uncomment the user
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+The mm/yy is 05/24
+The CVV is 111
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
