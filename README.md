@@ -1,6 +1,22 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 6.1 for purposes of learning Rails by example.
+
+## Quick glance of the project
+
+This is the main page where a user can see all the products listed ou regardless of which category it belongs to.
+!["Screenshot of main page 1"](https://github.com/dinasauur/jungle-rails/blob/master/docs/home-page-1.png?raw=true)
+!["Screenshot of main page 2"](https://github.com/dinasauur/jungle-rails/blob/master/docs/home-page-2.png?raw=true)
+On the home page, users can click on the category they want on the nav bar and it will take them to a list of products that are from that category.
+!["Screenshot of category page"](https://github.com/dinasauur/jungle-rails/blob/master/docs/category-page.png?raw=true)
+If the user is interest in a specific product, they can click on it and they will be redirected to that product page.
+!["Screenshot of product(:id) page"](https://github.com/dinasauur/jungle-rails/blob/master/docs/show-page.png?raw=true)
+Should the user wish to add some products to their cart, their cart page would look like this. It will provide them with a detailed breakdown of each product.
+!["Screenshot of confirmation message to delete"](https://github.com/dinasauur/jungle-rails/blob/master/docs/cart-page.png?raw=true)
+This is what the payment process looks like if the user is ready to pay for their product.
+!["Screenshot of confirmation message to delete"](https://github.com/dinasauur/jungle-rails/blob/master/docs/pay-card-page.png?raw=true)
+If user has admin access, they can add or delete products to the page.
+!["Screenshot of error messages"](https://github.com/dinasauur/jungle-rails/blob/master/docs/admin-product-page.png?raw=true)
 
 ## Setup
 
@@ -29,3 +45,5 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
+## 
