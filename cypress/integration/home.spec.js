@@ -1,7 +1,11 @@
-< referencce types="cyprress" />
+/// <reference types="cypress" />
 
 describe('home-page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('/')
   })
+  
+  it("There is products on the page", () => {
+    cy.get(".products article").should("be.visible");
+  });
 })
